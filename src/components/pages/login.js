@@ -1,127 +1,100 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
+import '../../assets/css/login.css';
+
 const Login = () => {
 
-    const navigate = useNavigate();
 
-    const [username, setUsername] = useState(undefined);
-    const [password, setPassword] = useState(undefined);
-    const [errorMessage, setErrorMessage] = useState(undefined);
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
 
 
 
-    const trueUsername = "123";
-    const truePassword = "123";
+    const giris = async () => {
 
-
-
-    const HandleLogin = () => {
-        let message = "";
-    
-        switch (true) {
-            case username === undefined || username === "":
-                message = "Lütfen kullanıcı adı giriniz";
-                break;
-            case password === undefined || password === "":
-                message = "Lütfen şifre giriniz";
-                break;
-            case password !== truePassword:
-                message = "Şifre yanlış. Lütfen tekrar deneyin";
-                break;
-            case username !== trueUsername:
-                message = "Kullanıcı adına ait bir hesap bulunamadı";
-                break;
-            default:
-                message = "Hoş geldiniz";
-                localStorage.setItem("greeting", "Hello, World!");
-
-                navigate('/');
-        }
-    
-        setErrorMessage(message);
-    };
-    
-
-
-    const HandleErrorMessage = () => {
-
-
-        if (errorMessage === undefined) {
-            return
-            <></>;
+        if (email === "" && password === "") {
+            alert("Lütfen email ve şifre giriniz.")
+            return;
 
         }
-        else {
-            return (
-                <label className="login-error-message">
-                    {errorMessage}
-                </label>
-            )
+        else if (email === "") {
+            alert("Lutfen Email Giriniz");
+            return;
+        }
+        else if (password === "") {
+            alert("Lütfen şifre giriniz");
+            return;
+        }
+        //merte gidecek verilerimiz sirasiyla:
+        // 1 email
+        // 2 sifre
+        //mertin benden istedigi format:
+        /*
+            {
+                email: kullanicininYazdigiMail,
+                password: kullanicininYazidigiSifre
+            }
+        */
+
+        const endpointeGidecekVeriler = {
+            email: email,
+            password: password
+        };
+
+        //mertin login endpointini yaz:
+        //mertin login endpointi : http://109.228.228.154:8080/login
+
+        const endpointLinki = 'http://109.228.228.154:8080/login';
+
+        try {
+            const donenVeri = await axios.post(endpointLinki, endpointeGidecekVeriler);
+
+            const jsonData = JSON.stringify(donenVeri.data);
+
+            // Cookie'ye dönen veriyi kaydetme
+            document.cookie = `userData=${jsonData}; path=/`;
+
+
+        }
+        catch (error) {
+            console.log(error)
+            if (error.response.status === 401) {
+                alert("kullanici adi veya sifre hatali");
+
+            }
+            else {
+                alert("bir hata olustu lutfen tekrar deneyin", error.response.data);
+
+            }
         }
     }
 
+   /* const denemeMethodu = async () => {
+        try {
+            const denemeDonenVerisi = await axios.get('http://109.228.228.154:8080/check');
+            console.log(denemeDonenVerisi.data); // response yerine data'ya erişiyoruz
+        } catch (error) {
+            console.error('Hata:', error.response.data); // Hata durumunda hatayı yakalayıp konsola yazdırıyoruz
+        }
+    }
+    */
+   
     return (
-        <>
-            <div className="login-container">
+        <div className="login-container">
+           <div className="login-wrapper">
+            <div className="login-title">Welcome!</div>
+            <div className="input"> 
+            <input className="login-email-input" type="email" placeholder= "email" onChange={(e) => { setEmail(e.target.value) }} />
+            <input className="login-password-input" type="password" placeholder= "password" onChange={(e) => { setPassword(e.target.value) }} />
+            </div>
+          
+            <div className="login-button-grad" onClick={() => { giris() }}>Login</div>
+       
 
-              
-                    <div className="login-wrapper">
-
-                        <div className="login-input-wrapper">
-                            <label>
-                                Username:
-                            </label>
-                            <input type="text"
-                                onChange={(e) => {
-                                    setUsername(e.target.value)
-                                }
-                                } />
-                        </div>
-
-                        <div className="login-input-wrapper">
-                            <label>
-                                Password:
-                            </label>
-                            <input type="password" onChange={(e) => {
-                                setPassword(e.target.value)
-                            }
-                            } />
-                        </div>
-
-
-
-
-                        <div className="login-input-button" onClick={() => { HandleLogin() }}>
-                            Giris yap
-                        </div>
-
-
-
-                        {errorMessage &&
-                            <label className="login-error-message">
-                                {errorMessage}
-                            </label>
-                        }
-
-
-
-
-
-
-                    </div>
-                
-
-
-
-
-
-            </div >
-
-
-
-
-
-        </>
+           </div>
+            
+        </div>
     )
 }
 export default Login;
