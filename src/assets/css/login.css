@@ -66,26 +66,27 @@
 
 .login-email-input {
     font-size: 15px;
+    border-style: solid ;
+    border-color: #3f3f3f9a;
     outline: none;
     height: 30px;
-    border-radius: 8px;
+    border-radius: 5px;
     font-family: "Poppins", sans-serif;
     font-weight: 300;
     font-style: normal;
-    border-style: solid;
-    border-color: #212529;
-    background-color: transparent;
+    background-color: #fbfff4;
 }
 
 .login-password-input {
     font-size: 15px;
     outline: none;
+    border-radius: 5px;
     height: 30px;
-    border-radius: 8px;
     font-family: "Poppins", sans-serif;
     font-weight: 300;
     font-style: normal;
-    border-style: solid;
-    border-color: #212529;
-    background-color: transparent;
+    background-color: #fbfff4;
+    border-style: solid ;
+    border-color: #3f3f3f9a;
+    
 }
