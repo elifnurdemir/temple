@@ -2,14 +2,12 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import '../../assets/css/login.css';
+import video from '../../assets/media/gift.mp4';
 
 const Login = () => {
 
-
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-
-
 
     const giris = async () => {
 
@@ -51,11 +49,9 @@ const Login = () => {
             const donenVeri = await axios.post(endpointLinki, endpointeGidecekVeriler);
 
             const jsonData = JSON.stringify(donenVeri.data);
-
+            console.log(donenVeri.data);
             // Cookie'ye dönen veriyi kaydetme
             document.cookie = `userData=${jsonData}; path=/`;
-
-
         }
         catch (error) {
             console.log(error)
@@ -70,30 +66,35 @@ const Login = () => {
         }
     }
 
-   /* const denemeMethodu = async () => {
-        try {
-            const denemeDonenVerisi = await axios.get('http://109.228.228.154:8080/check');
-            console.log(denemeDonenVerisi.data); // response yerine data'ya erişiyoruz
-        } catch (error) {
-            console.error('Hata:', error.response.data); // Hata durumunda hatayı yakalayıp konsola yazdırıyoruz
-        }
-    }
-    */
-   
-    return (
-        <div className="login-container">
-           <div className="login-wrapper">
-            <div className="login-title">Welcome!</div>
-            <div className="input"> 
-            <input className="login-email-input" type="email" placeholder= "email" onChange={(e) => { setEmail(e.target.value) }} />
-            <input className="login-password-input" type="password" placeholder= "password" onChange={(e) => { setPassword(e.target.value) }} />
-            </div>
-          
-            <div className="login-button-grad" onClick={() => { giris() }}>Login</div>
-       
+    /* const denemeMethodu = async () => {
+         try {
+             const denemeDonenVerisi = await axios.get('http://109.228.228.154:8080/check');
+             console.log(denemeDonenVerisi.data); // response yerine data'ya erişiyoruz
+         } catch (error) {
+             console.error('Hata:', error.response.data); // Hata durumunda hatayı yakalayıp konsola yazdırıyoruz
+         }
+     }
+     */
 
-           </div>
-            
+    return (
+
+        <div className="login-container">
+            <video autoPlay loop muted className="video">
+                <source src={video} type="video/mp4" />
+            </video>
+            {/*https://www.freepik.com/free-video/overhead-shot-man-gift-wrapping-romantic-valentines-present-box-using-green-screen-mobile-phone_731181#fromView=resource_detail&position=0&from_element=related_resources*/}
+            <div className="login-wrapper">
+                <div className="login-title">Welcome!</div>
+                <div className="input">
+                    <input className="login-email-input" type="email" placeholder="email" onChange={(e) => { setEmail(e.target.value) }} />
+                    <input className="login-email-input" type="password" placeholder="password" onChange={(e) => { setPassword(e.target.value) }} />
+                </div>
+
+                <div className="login-button-grad" onClick={() => { giris() }}>Login</div>
+
+
+            </div>
+
         </div>
     )
 }
