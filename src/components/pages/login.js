@@ -86,7 +86,7 @@ const Login = () => {
             <div className="login-wrapper">
                 <div className="login-title">Welcome!</div>
                 <div className="input">
-                    <input className="login-email-input" type="email" placeholder="email" onChange={(e) => { setEmail(e.target.value) }} />
+                    <input className="login-email-input" type="text" placeholder="username" onChange={(e) => { setEmail(e.target.value) }} />
                     <input className="login-email-input" type="password" placeholder="password" onChange={(e) => { setPassword(e.target.value) }} />
                 </div>
 
