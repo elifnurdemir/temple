@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    padding: 0;
+    margin: 0;
+
+}
+
+.navbar-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 50px;
+}
+
+.navbar-elements {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+}
+
+.paper-photo-frame img {
+    width: 234px;
+    object-fit: contain;
+    object-position: center;
+    padding: 28px 15px 59px 15px;
+    background-color: #fff;
+}
+
+.template-row {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.big-title {
+    font-family: "Caveat", cursive;
+    ;
+    font-size: 4rem;
+    color: #eee;
+    text-align: center;
+}
+
+.text-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: "Caveat", cursive;
+    ;
+    font-size: 25px;
+
+
+
+}
+
+.template-row {
+    display: flex;
+    flex-direction: row;
+    padding: 50px;
+    gap: 50px;
+    color: #eee;
+}
+
+.flex-1 {
+    flex: 1;
+}
+
+.flex-centered {
+    display: flex;
+    justify-content: center;
+}
+
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+}
+
+
+.black-solid-border-modern-photo-frame {
+    width: 400px;
+    padding: 25px;
+    background-color: #fff;
+    box-shadow: inset 0px 0px 5px #111, 0px 0px 5px #111;
+
+}
+
+
+.black-solid-border-modern-photo-frame-normal-border {
+    border: 15px solid #111;
+}
+
+
+/*{outline: 3px solid yellow;} */

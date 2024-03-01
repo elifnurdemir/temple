@@ -7,7 +7,7 @@ const Landing= ()=> {
 
     return(
         <>
-          <div className="login-button-grad" >Login</div>
+          <div className="login-button-grad landing-login-button" >Login</div>
         <Navbar/>
         </>
       
