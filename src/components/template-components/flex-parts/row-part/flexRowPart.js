@@ -5,10 +5,10 @@ const FlexRowPart = ({ Components }) => {
         <div className="template-row">
             {Components.map((component, index) => {
                 const ComponentName = component.ComponentName;
-                const ComponentFinderMethodundanDonenVeJsondakiIsmiyleEslesenComponentinKendisi = getComponentByName(ComponentName);
+                const TheComponent = getComponentByName(ComponentName);
 
                 return (
-                    <ComponentFinderMethodundanDonenVeJsondakiIsmiyleEslesenComponentinKendisi
+                    <TheComponent
                         key={index}
                         Parameters={component.Parameters} /> // Eğer Parameters belirtilmemişse varsayılan bir boş nesne gönderir.
                 );
