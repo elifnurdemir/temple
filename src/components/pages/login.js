@@ -36,7 +36,7 @@ const Login = () => {
         */
 
         const endpointeGidecekVeriler = {
-            email: email,
+            username: email,
             password: password
         };
 
@@ -48,10 +48,10 @@ const Login = () => {
         try {
             const donenVeri = await axios.post(endpointLinki, endpointeGidecekVeriler);
 
-            const jsonData = JSON.stringify(donenVeri.data);
-            console.log(donenVeri.data);
-            // Cookie'ye dönen veriyi kaydetme
-            document.cookie = `userData=${jsonData}; path=/`;
+            const token = donenVeri.data.jwt;
+
+            // Directly set the token as the cookie value
+            document.cookie = `userData=${token}; path=/`;
         }
         catch (error) {
             console.log(error)

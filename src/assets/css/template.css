@@ -102,5 +102,103 @@ body {
     border: 15px solid #111;
 }
 
+.x{
+    /* From https://css.glass */
+background: rgba(255, 255, 255, 0.1);
+padding: 30px;
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5.1px);
+-webkit-backdrop-filter: blur(5.1px);
+border: 1px solid rgba(255, 255, 255, 0.49);
+}
 
 /*{outline: 3px solid yellow;} */
+
+
+.film-strip-outer {
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.film-strip {
+    border: 10px solid #000;
+    border-left: none;
+    border-right: none;
+
+}
+
+.film-strip-dash {
+    border: 10px dashed #000;
+    border-left: none;
+    border-right: none;
+}
+
+.film-strip-inner {
+    border-left: 5px solid #000;
+    border-right: 5px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.film-rectangle-video {
+    object-fit: contain;
+    max-width: 400px;
+}
+
+
+
+
+.double-side-card {
+    width: 300px;
+    height: 200px;
+    perspective: 1000px;
+    cursor: pointer;
+  }
+  
+  .double-side-card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.999s;
+  }
+  
+  .double-side-card:hover .double-side-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .double-side-card-front,
+  .double-side-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+  
+  .double-side-card-front {
+    background-color: #6A2C70;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    border: 10px solid #6A2C70;
+    border-radius: 10px;
+    justify-content: center;
+    font-size: 24px;
+    transform: rotateY(0deg);
+  }
+  
+  .double-side-card-back {
+    background-color: #F08A5D;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    border: 10px solid #F08A5D;
+    border-radius: 10px;
+    justify-content: center;
+    font-size: 24px;
+    transform: rotateY(180deg);
+  }
+  
