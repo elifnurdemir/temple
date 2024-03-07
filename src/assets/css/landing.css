@@ -1,5 +1,257 @@
-.landing-login-button {
-   margin-left: 80vw;
-   width: 50px;
-   margin-top: 20px;
+.landing-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
 }
+
+.landing-text-container {
+    color: #333;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+
+.landing-title {
+    font-size: 90px;
+    font-weight: 600;
+
+}
+
+.landing-description {
+    font-size: 22px;
+    color: #333;
+    width: 100vh;
+    text-align: center;
+}
+
+.landing-button {
+    background-image: linear-gradient(to right, #FEAC5E 0%, #C779D0 51%, #FEAC5E 100%);
+    padding: 15px 40px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    border-radius: 5px;
+    display: block;
+    cursor: pointer;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 17 px;
+}
+
+.landing-button:hover {
+    background-position: right center;
+    /* change the direction of the change here */
+    text-decoration: none;
+}
+
+.brand-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+}
+
+.brand-icon {
+    height: 50px;
+    width: auto;
+    object-fit: contain;
+    cursor: pointer;
+}
+
+.landing-bottom-button {
+    font-size: 80px;
+    cursor: pointer;
+    color: #333;
+    font-weight: 500;
+}
+
+.landing-sub-title {
+    font-size: 70px;
+    font-weight: 600;
+    color: #333;
+    align-items: center;
+    text-align: center;
+    width: 100vh;
+}
+
+.feature-button-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.feature-item {
+    font-size: 21px;
+    text-align: center;
+    width: 200px;
+    height: 50px;
+    color: #333;
+    background: #d3d2d265;
+    border-radius: 10px;
+}
+
+.landing-sub-text {
+    color: #333;
+    font-size: 25px;
+    text-align: center;
+    width: 150vh;
+
+}
+
+.card-container {
+    height: auto;
+    width: 130vh;
+}
+
+
+.c-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 20px;
+    gap: 30px;
+    color: #333;
+
+}
+
+.card-title {
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.card-text {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.card-detail {
+    font-size: 15px;
+    font-weight: 600;
+    border: solid #cccccc5d;
+    border-radius: 30px;
+    width: 100px;
+    cursor: pointer;
+    text-align: center;
+    padding: 10px 10px;
+
+}
+
+.kayan-yazi-container {
+    width: 100%;
+    overflow: hidden;
+    /* Taşma durumunda içeriği gizle */
+}
+
+.kayan-yazi {
+    white-space: nowrap;
+    width: 100%;
+    /* İçeriğe göre genişlik ayarla */
+    font-size: 50px;
+    font-weight: 700;
+    margin-bottom: 40px;
+
+}
+
+.sol-yon {
+    animation: kayanYaziSol 50s linear infinite;
+}
+
+.sag-yon {
+    animation: kayanYaziSag 50s linear infinite;
+}
+
+@keyframes kayanYaziSol {
+    0% {
+        transform: translateX(100%);
+        /* Metni sağa doğru kaydırma */
+    }
+
+    100% {
+        transform: translateX(-100%);
+        /* Metni sola doğru kaydırma */
+    }
+}
+
+@keyframes kayanYaziSag {
+    0% {
+        transform: translateX(-100%);
+        /* Metni sola doğru kaydırma */
+    }
+
+    100% {
+        transform: translateX(100%);
+        /* Metni sağa doğru kaydırma */
+    }
+}
+
+.right-left-container {
+    display: flex;
+}
+
+.left-side-container {
+    flex: 1;
+    /* Sol tarafın genişliğini esnek yapar */
+    padding: 20px;
+    border-right: 1px solid #ccc;
+    /* Sağ tarafı ayırmak için sınır ekler */
+}
+
+.right-side-container {
+    flex: 1;
+    /* Sağ tarafın genişliğini esnek yapar */
+    padding: 20px;
+}
+
+.left-side-title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.left-side-subtitle {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.left-side-text {
+    margin-top: 10px;
+}
+
+.left-side-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #f700ff;
+    color: #fff;
+    cursor: pointer;
+}
+
+.left-vertical-text {
+    writing-mode: vertical-rl;
+    text-orientation: sideways;
+    margin-top: 10px;
+
+}
+
+.high-conversion-button {
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    width: 200px;
+    height: 50px;
+    color: #333;
+    background: #d3d2d265;
+    border-radius: 10px;
+}
+
+
+/* {
+    outline: 3px solid red;
+}*/

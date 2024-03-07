@@ -6,20 +6,7 @@ body {
 
 }
 
-.navbar-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0px 50px;
-}
 
-.navbar-elements {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 20px;
-}
 
 .logo img {
     width: 50px;
