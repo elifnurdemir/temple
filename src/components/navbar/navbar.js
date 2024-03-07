@@ -37,12 +37,6 @@ const Navbar = () => {
 
                 </div>
             </div>
-
-           
-
-
-
-
             <div className="landing-navbar-right">
             <div className={`landing-navbar-item-container ${hamburgerVisible ? 'landing-navbar-item-container-visible' : 'landing-navbar-item-container-hidden'}`}>
                 <div className="landing-navbar-item landing-navbar-item-active">
@@ -68,12 +62,12 @@ const Navbar = () => {
                 </div>
             </div>
                 <input type="checkbox" id="checkbox" onClick={() => { setHamburgerVisible(!hamburgerVisible) }} />
-                <label for="checkbox" class="toggle">
-                    <div class="bars" id="bar1"></div>
-                    <div class="bars" id="bar2"></div>
-                    <div class="bars" id="bar3"></div>
+                <label for="checkbox" className="toggle">
+                    <div className="bars" id="bar1"></div>
+                    <div className="bars" id="bar2"></div>
+                    <div className="bars" id="bar3"></div>
                 </label>
-                <div className="login-button-grad landing-login-button" onClick={handleLoginClick} >Login</div>
+                <div className="login-button-grad landing-login-button" onClick={() => {handleLoginClick()}} >Login</div>
             </div>
 
         </div>
