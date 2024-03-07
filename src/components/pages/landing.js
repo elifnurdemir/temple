@@ -62,7 +62,7 @@ const Landing = () => {
         <div className='landing-container-top-container landing-container' id="test">
           <div className='landing-text-container'>
             <div className='landing-title'>
-              Simplicity is the ultimate sophistication.
+              Kuşum Benim Seni Çok Seviyorum!
             </div>
             <div className='landing-description'>
               Combine seamlessly fitting layouts, customize everything you want.
