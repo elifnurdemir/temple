@@ -44,13 +44,13 @@
     background-image: linear-gradient(to right, #FEAC5E 0%, #C779D0 51%, #FEAC5E 100%);
     padding: 5px 25px;
     text-align: center;
-    text-transform: uppercase;
     transition: 0.5s;
     background-size: 200% auto;
     color: rgb(255, 255, 255);
     border-radius: 5px;
     display: block;
     cursor: pointer;
+    white-space: nowrap;
     font-family: "Poppins", sans-serif;
     font-style: normal;
     font-weight: 400;
