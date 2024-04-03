@@ -5,11 +5,11 @@ import Navbar from './components/navbar/navbar';
 import Login from './components/pages/login';
 import Landing from './components/pages/landing';
 import Template from './components/pages/template';
-import AnimatedCursor from "react-animated-cursor"
+import AnimatedCursor from "react-animated-cursor";
+import Dashboard from './components/pages/dashboard';
+import Createtemplate from './components/pages/createTemplate'; // Düzeltildi
 
 function App() {
-
-
   return (
     <>
       <AnimatedCursor
@@ -30,6 +30,8 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/" element={<Landing />} />
           <Route path="/template" element={<Template />} />
+          <Route path="/dashboard" exact element={<Dashboard />} />
+          <Route path="/createTemplate" element={<Createtemplate />} />
         </Routes>
       </Router>
     </>

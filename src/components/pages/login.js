@@ -5,6 +5,7 @@ import '../../assets/css/login.css';
 import video from '../../assets/media/gift.mp4';
 
 const Login = () => {
+    const navigate = useNavigate();
 
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -52,6 +53,7 @@ const Login = () => {
 
             // Directly set the token as the cookie value
             document.cookie = `userData=${token}; path=/`;
+            navigate('/dashboard');
         }
         catch (error) {
             console.log(error)
