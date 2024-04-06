@@ -9,11 +9,17 @@
 
 .template-creation-sidebar-item-type-row {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
     padding: 10px;
     cursor: pointer;
     transition: all 0.3s ease;
     aspect-ratio: 1;
+
+}
+.template-creation-sidebar-item-type-row img{
+    width: 80%;
 }
 
 .template-creation-sidebar-item-type-row:hover {
