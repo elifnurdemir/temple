@@ -13,8 +13,8 @@ const DashboardNavbar = () => {
         {
             isLogout: false,
             icon: UserLogo,
-            title: "deneme",
-            url: "/dashboard"
+            title: "Sıkça Sorulan Sorular",
+            url: "/faq"
         },
         {
             isLogout: false,

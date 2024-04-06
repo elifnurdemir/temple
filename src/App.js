@@ -8,6 +8,8 @@ import Template from './components/pages/template';
 import AnimatedCursor from "react-animated-cursor";
 import Dashboard from './components/pages/dashboard';
 import Createtemplate from './components/pages/createTemplate';
+import Faq from './components/preferences/faq';
+
 
 function App() {
   const [showCursor, setShowCursor] = useState(true);
@@ -25,9 +27,9 @@ function App() {
           <Route path="/template" element={<Template />} />
           <Route path="/dashboard" exact element={<Dashboard />} />
           <Route path="/createTemplate" element={<Createtemplate />} />
+          <Route path="/faq" element={<Faq />} />
         </Routes>
       </Router>
-      <p>Page transitions count: {counter}</p>
     </>
   );
 }

@@ -1,0 +1,65 @@
+.faq-container {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    background-color: #FBFCF8;
+    font-family: Poppins;
+    justify-content: space-around;
+}
+
+.faq-text-area {
+    display: flex;
+    flex-direction: column;
+    width: 50%; /* Bu satır, .faq-text-area'nın genişliğini ayarlar, değiştirebilirsiniz */
+    padding: 20px; /* İstenilen boşlukları ayarlayabilirsiniz */
+    box-sizing: border-box; /* padding eklediğinizde, genişliği değişmeden kutuyu hizalamak için */
+    gap: 15px;
+}
+.faq-title {
+    font-weight: 600;
+    font-size: 25px;
+    color: #555;
+}
+.faq-q {
+    font-weight: 500;
+    color: #555;
+}
+.faq-a {
+    font-weight: 300;
+    color: #666;
+}
+
+.faq-search input[type="text"]::placeholder {
+    font-weight: 500;
+    font-size: 13spx;
+    font-family: Poppins; 
+}
+
+.faq-search {
+    width: 20%; /* Arama kutusunun genişliğini ayarlar */
+
+}
+
+.faq-search input[type="text"] {
+    width: calc(100% - 30px); /* Input kutusunun genişliğini ayarlar */
+    padding: 10px; /* İstenilen boşlukları ayarlayabilirsiniz */
+    border: 1px solid #ccc; /* Kenarlık rengi */
+    border-radius: 10px; /* Kenar yuvarlaklığı */
+    outline: none; /* Odaklandığında mavi kenar çizgisini kaldırır */
+    transition: border-color 0.3s; /* Kenarlık rengi için geçiş efekti */
+}
+
+.faq-search input[type="text"]:focus {
+    border-color: #ea00ff; /* Odaklandığında kenarlık rengi */
+}
+
+
+/* İhtiyacınıza göre diğer stilleri buraya ekleyebilirsiniz */
+
+
+
+
+/*{
+    outline: 1px solid red !important;
+}*/
