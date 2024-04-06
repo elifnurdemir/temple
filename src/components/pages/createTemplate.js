@@ -1,9 +1,10 @@
 import React from "react";
+import TemplateSidebar from "../sidebar/templateSidebar";
 
 const Createtemplate = () => {
 
     return(
-        <>asdf</>
+        <TemplateSidebar/>
     )
 }
 export default Createtemplate;

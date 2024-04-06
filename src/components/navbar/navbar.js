@@ -25,8 +25,10 @@ const Navbar = () => {
     const [hamburgerVisible, setHamburgerVisible] = useState(false);
 
     const handleLoginClick = () => {
-        navigate('/login');
-    };
+        document.body.style.cursor = 'auto'; 
+        navigate('/login')
+        
+      };
 
     const [hoveredIcon, setHoveredIcon] = useState(null);
 

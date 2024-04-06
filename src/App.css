@@ -1,6 +1,9 @@
 .App {
   text-align: center;
 }
+.default-cursor {
+  cursor: default !important;
+}
 
 .App-logo {
   height: 40vmin;

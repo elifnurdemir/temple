@@ -27,12 +27,13 @@ import PayPerClickIcon from "../../assets/media/pay-per-click.png";
 import SocialNetworkIcon from "../../assets/media/social-network.png";
 import WebDesignIcon from "../../assets/media/web-design.png";
 import arrowIcon from "../../assets/media/arrow.png";
+import AnimatedCursor from "react-animated-cursor";
 const Landing = () => {
   const navigate = useNavigate();
 
   const [showNavbar, setShowNavbar] = useState(true);
   const [vantaEffect, setVantaEffect] = useState(null)
-
+  const [customCursor, setCustomCursor] = useState(true);
   const JoinTheNextRef = useRef(null);
   const CardContainerRef = useRef(null);
   const executeScroll = () => JoinTheNextRef.current.scrollIntoView()
@@ -70,7 +71,10 @@ const Landing = () => {
   }, []);
 
   const handleLoginClick = () => {
-    navigate('/login');
+    setCustomCursor(false);
+    document.body.style.cursor = 'auto'; 
+    navigate('/login')
+    
   };
 
   const icons = [
@@ -88,10 +92,27 @@ const Landing = () => {
     { src: VkIcon, alt: 'VK' },
     { src: WhatsappIcon, alt: 'Whatsapp' }
   ];
+  
 
   return (
     <>
       {showNavbar && <Navbar />}
+      {customCursor &&
+        <AnimatedCursor
+          innerSize={8}
+          outerSize={35}
+          innerScale={1}
+          outerScale={2}
+          outerAlpha={0}
+          innerStyle={{
+            backgroundColor: '#7d8dff'
+          }}
+          outerStyle={{
+            border: '3px solid #ea60d5'
+          }}
+        />
+      }
+
       <div className='landing-container' >
         <div className='landing-container-top-container' id="test">
           <div className='landing-text-container'>
@@ -99,7 +120,7 @@ const Landing = () => {
               Hoşgeldin!
             </div>
             <div className='landing-description'>
-              bir kuş kadar özgür, bir kanat çırpışı kadar özel 
+              bir kuş kadar özgür, bir kanat çırpışı kadar özel
             </div>
           </div>
           <div className='landing-button' onClick={() => { handleLoginClick() }} >Web Sayfanı Oluştur</div>
@@ -123,9 +144,9 @@ const Landing = () => {
 
         <div className="landing-sub-container" ref={JoinTheNextRef}>
           <div className='landing-sub-title'>
-          <div className="landing-sub-title-revolution">Sevginizin Dijital İzlerini Oluşturun</div>
+            <div className="landing-sub-title-revolution">Sevginizin Dijital İzlerini Oluşturun</div>
           </div>
-          
+
           <div className='feature-button-container'>
             <div className="feature-item-row">
               <div className='feature-item feature-item-1'>
@@ -376,10 +397,10 @@ const Landing = () => {
         </div>
 
         <div className='landing-sub-title'>
-         Hayalinizdeki "O" Hediyeyi Tasarlayın!
+          Hayalinizdeki "O" Hediyeyi Tasarlayın!
         </div>
         <div className='landing-description'>
-        Bir hediye vermek, sadece bir kutu açmaktan daha fazlasıdır... Web sitemiz, duygularınızı en samimi şekilde ifade etmenize ve yalnızca size özel web sayfaları tasarlamanıza imkan sunarak,sizlerin de emek harcayarak oluşturacağı bu eşsiz hediye ile sevdiklerinize özel bir deneyim sunuyor. Her bir sayfa, sizinle yaşadıkları anıların özel bir yansımasıdır. Onların kalplerine dokunmak için yeni bir yolculuğa çıkmaya ne dersiniz?
+          Bir hediye vermek, sadece bir kutu açmaktan daha fazlasıdır... Web sitemiz, duygularınızı en samimi şekilde ifade etmenize ve yalnızca size özel web sayfaları tasarlamanıza imkan sunarak,sizlerin de emek harcayarak oluşturacağı bu eşsiz hediye ile sevdiklerinize özel bir deneyim sunuyor. Her bir sayfa, sizinle yaşadıkları anıların özel bir yansımasıdır. Onların kalplerine dokunmak için yeni bir yolculuğa çıkmaya ne dersiniz?
         </div>
 
         <div className="ipad-mockup"
