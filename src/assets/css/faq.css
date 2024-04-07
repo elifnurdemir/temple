@@ -1,65 +1,103 @@
-.faq-container {
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: row;
+body {
     background-color: #FBFCF8;
-    font-family: Poppins;
-    justify-content: space-around;
+
 }
 
-.faq-text-area {
+.faq-container {
+    padding: 1% 20px;
+    display: flex;
+    flex-direction: row;
+    font-family: Poppins;
+    justify-content: space-between;
+
+}
+
+.category-elements {
     display: flex;
     flex-direction: column;
-    width: 50%; /* Bu satır, .faq-text-area'nın genişliğini ayarlar, değiştirebilirsiniz */
-    padding: 20px; /* İstenilen boşlukları ayarlayabilirsiniz */
-    box-sizing: border-box; /* padding eklediğinizde, genişliği değişmeden kutuyu hizalamak için */
-    gap: 15px;
+    padding: 3% 50px;
+    cursor: pointer;
+    margin-top: 20px;
 }
+
+.faq-category-title {
+    font-weight: 500;
+    font-size: 20px;
+    color: #555;
+    padding: 1% 20px;
+  
+
+}
+
 .faq-title {
-    font-weight: 600;
+    font-weight: 500;
     font-size: 25px;
     color: #555;
+    padding: 1% 20px;
+
 }
+.faq-text-area {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    padding: 3% 50px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
 .faq-q {
     font-weight: 500;
+    font-size: 16px;
     color: #555;
+    border-radius: 10px;
+    border: none;
+    padding: 2% 30px;
+    width: fit-content;
 }
+
 .faq-a {
     font-weight: 300;
     color: #666;
-}
 
-.faq-search input[type="text"]::placeholder {
-    font-weight: 500;
-    font-size: 13spx;
-    font-family: Poppins; 
-}
-
-.faq-search {
-    width: 20%; /* Arama kutusunun genişliğini ayarlar */
 
 }
+.search-bar {
+    display: flex;
+    flex-direction: row;
+    line-height: 28px;
+    align-items: center;
+    position: relative;
+    max-width: 190px;
+  }
+  
+  .search-input {
+    height: 40px;
+    line-height: 28px;
+    padding: 0% 1rem;
+    width: 100%;
+    padding-left: 2.5rem;
+    border: transparent;
+    border-radius: 8px;
+    outline: none;
+    background-image: linear-gradient(43deg, #4054b9a2 0%, #c850c080 46%, #ffcd705b 100%);
+    transition: .3s ease;
+    color: #ffffff;
+    font-family: Poppins;
+  }
+  .search-input::placeholder {
+    color: #ffffff;
+  }
+  
 
-.faq-search input[type="text"] {
-    width: calc(100% - 30px); /* Input kutusunun genişliğini ayarlar */
-    padding: 10px; /* İstenilen boşlukları ayarlayabilirsiniz */
-    border: 1px solid #ccc; /* Kenarlık rengi */
-    border-radius: 10px; /* Kenar yuvarlaklığı */
-    outline: none; /* Odaklandığında mavi kenar çizgisini kaldırır */
-    transition: border-color 0.3s; /* Kenarlık rengi için geçiş efekti */
-}
-
-.faq-search input[type="text"]:focus {
-    border-color: #ea00ff; /* Odaklandığında kenarlık rengi */
-}
-
-
-/* İhtiyacınıza göre diğer stilleri buraya ekleyebilirsiniz */
-
-
-
-
+  
+  
+  
+  
+  
+  
+  
+  
 /*{
     outline: 1px solid red !important;
-}*/
+}
+*/

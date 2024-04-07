@@ -8,7 +8,6 @@ const DashboardNavbar = () => {
     const username = "elif";
     const [wrapperShow, setWrapperShow] = useState(false);
 
-
     const userContentList = [
         {
             isLogout: false,
@@ -34,11 +33,12 @@ const DashboardNavbar = () => {
         deleteCookie('userData');
         navigate('/login');
     }
+
     function deleteCookie(name) {
         document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
     }
 
-    const NavbarUserButton  = () => {
+    const NavbarUserButton = () => {
         return (
             <div className='dashboard-navbar-user-button' onClick={() => { setWrapperShow(!wrapperShow) }}>
                 <img className='user-button-logo' src={UserLogo} alt='UserLogo' />
@@ -47,6 +47,13 @@ const DashboardNavbar = () => {
         )
     }
 
+    const handleContentClick = (url, isLogout) => {
+        if (isLogout) {
+            logout();
+        } else {
+            navigate(url);
+        }
+    }
 
     return (
         <div className='dashboard-navbar-container'>
@@ -54,25 +61,20 @@ const DashboardNavbar = () => {
                 Temple
             </div>
             <div className='dashboard-navbar-user-button-container'>
-                <NavbarUserButton  />
+                <NavbarUserButton />
                 <div className='dashboard-navbar-user-content-container'>
-                    {wrapperShow && userContentList && userContentList.map(content => (
+                    {wrapperShow && userContentList && userContentList.map((content, index) => (
 
-                        <div className='dashboard-navbar-user-content-wrapper' onClick={() => {
-                            if (content.isLogout) {
-                                logout();
-                            }
-                        }}>
+                        <div key={index} className='dashboard-navbar-user-content-wrapper' onClick={() => handleContentClick(content.url, content.isLogout)}>
                             <img className='dashboard-navbar-user-content-icon' src={content.icon} alt='icon' />
                             <div className='dashboard-navbar-user-content'>{content.title}</div>
                         </div>
                     ))}
                 </div>
-
-
             </div>
         </div>
     );
 };
 
 export default DashboardNavbar;
+
