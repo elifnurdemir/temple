@@ -48,7 +48,13 @@ const Faq = () => {
    return (
       <React.Fragment>
          <DashboardNavbar />
-         <div className="faq-title">Sıkça Sorulan Sorular</div>
+         <div className="faq-title-container">
+            <div className="faq-title">Sıkça Sorulan Sorular</div>
+            <div className="search-bar">
+               <input placeholder="Search" type="search" className="search-input" />
+            </div>
+         </div>
+
          <div className="faq-container">
             <div className="faq-category">
                <div className="faq-category-title">Kategoriler</div>
@@ -68,9 +74,7 @@ const Faq = () => {
                   ))}
                </div>
             )}
-            <div className="search-bar">
-               <input placeholder="Search" type="search" className="search-input" />
-            </div>
+
          </div>
       </React.Fragment>
    );

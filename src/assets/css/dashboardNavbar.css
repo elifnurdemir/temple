@@ -35,7 +35,6 @@
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
     background-color: #FEF9F3;
-    
     overflow: hidden;
 }
 
@@ -44,7 +43,7 @@
 }
 
 .dashboard-navbar-user-button:hover .user-button-logo{
-    background: linear-gradient(to right, #ffc28c, #ea60d5, #7d8dff);
+    background-image: linear-gradient(43deg, #4054b960 0%, #c850c054 46%, #ffcd703a 100%);
     border-radius: 100%;
 }
 
